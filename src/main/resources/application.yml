@@ -8,15 +8,13 @@ server:
       min-spare: 5
 
 spring:
-  server:
-    git:
   application:
     name: config-service
   cloud:
     config:
-      uri: https://github.com/yeahokthen/config-repo.git
       server:
         git:
+          uri: https://github.com/yeahokthen/config-repo.git
           default-label: master
           timeout: 5
           clone-on-start: true
